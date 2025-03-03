@@ -46,7 +46,68 @@ h1 {
     padding: 1rem;
 }
 
-li {
-    padding: 0.5rem;
-    list-style: none;
+.animali-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titolo */
+.animali-title {
+    font-size: 28px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* Stile del details */
+.animali-details {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Stile del summary */
+.animali-details summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Effetto hover */
+.animali-details:hover {
+    background-color: #e8f5e9;
+}
+
+/* Lista degli animali */
+.animali-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Singolo elemento della lista */
+.animale-item {
+    background: #dff0d8;
+    color: #2e7d32;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Effetto hover sulla lista */
+.animale-item:hover {
+    background: #c8e6c9;
+    transform: scale(1.05);
 }
