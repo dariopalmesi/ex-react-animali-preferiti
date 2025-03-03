@@ -15,16 +15,21 @@
         const { useState } = React;
         const AnimaliPreferiti = () => {
             const animalsChoices = ["Cane", "Gatto", "Pappagallo", "Cavallo", "Panda"];
-            const [animali, setAnimali] = useState()
+            const [animali, setAnimali] = useState([])
+            const aggiungiAnimale = () => {
+                const nuovoAnimale = animalsChoices[Math.floor(Math.random() * animalsChoices.length)]
+                setAnimali([...animali, nuovoAnimale])
+            }
             return (
                 <div className='animali-container'>
+                    <button onClick={aggiungiAnimale} className='aggiungi-btn'>➕ Aggiungi Animale</button>
                     <details className='animali-details'>
                         <summary>
-                            <h1 className='animali-title'>Animali</h1>
+                            <h1 className='animali-title'>🐾 Animali Preferiti 🐾</h1>
                         </summary>
                         <div>
                             <ul>
-                                {animalsChoices.map((animale, index) => (
+                                {animali.map((animale, index) => (
                                     <li key={index} className='animale-item'>{animale}</li>
                                 ))}
                             </ul>

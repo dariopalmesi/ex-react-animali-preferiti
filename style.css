@@ -111,3 +111,20 @@ h1 {
     background: #c8e6c9;
     transform: scale(1.05);
 }
+
+/* Bottone per aggiungere animali */
+.aggiungi-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 0.5rem;
+}
+
+.aggiungi-btn:hover {
+    background-color: #388E3C;
+}
