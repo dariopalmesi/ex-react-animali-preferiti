@@ -39,8 +39,10 @@
             const [show, setShow] = useState(false)
             const [newAnimal, setNewAnimal] = useState('')
             const handleConfirm = () => {
+                if (!newAnimal) return
                 setAnimali([...animali, newAnimal]);
-                setNewAnimal(""); // Resetta l'input   
+                setNewAnimal(""); // Resetta l'input  
+                setShow(false)
             }
             return (
                 <div className='animali-container'>
@@ -48,7 +50,12 @@
                     <section>
                         <Modal
                             title='Il mio animale'
-                            content={<input type='text' placeholder='inserisci animale' value={newAnimal} onChange={(e) => setNewAnimal(e.target.value)} />}
+                            content={<input
+                                type='text'
+                                placeholder='inserisci animale'
+                                value={newAnimal}
+                                onChange={(e) => setNewAnimal(e.target.value)}
+                            />}
                             show={show}
                             onClose={() => setShow(false)}
                             onConfirm={handleConfirm}
